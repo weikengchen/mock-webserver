@@ -94,7 +94,9 @@ class InternalServer {
 		}
 
 		$content  = file_get_contents($path);
+		print_r($contents);
 		$response = unserialize($content);
+		print_r($response);
 		if( !$response instanceof ResponseInterface ) {
 			throw new ServerException('invalid serialized response');
 		}
