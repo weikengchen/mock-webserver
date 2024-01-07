@@ -94,7 +94,7 @@ class InternalServer {
 		}
 
 		$content  = file_get_contents($path);
-		print_r($contents);
+		print_r($content);
 		$response = unserialize($content);
 		print_r($response);
 		if( !$response instanceof ResponseInterface ) {
